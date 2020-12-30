@@ -96,7 +96,6 @@ export async function getReport(snapshot, week) {
   try {
     response = await axios.get(`${config.repo}/reports/${config.tokenSymbol}/${week}/_totals.json`);
     report = response.data
-    console.log(response);
   } catch (error) {
     report = {}
     console.error(error);

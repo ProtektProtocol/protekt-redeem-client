@@ -2,7 +2,7 @@
   <div class="pt-2">
     <Container :slim="true">
       <Block class="text-center py-4">
-        <h1 class="mb-2">Claim PTK</h1>
+        <h1 class="mb-2">Claim {{ config.tokenSymbol }}</h1>
         <form
           @submit.prevent="handleSubmit"
           style="max-width: 460px;"
@@ -60,9 +60,6 @@ import config from '@/config';
 
 export default {
   data() {
-
-    console.log('||||')
-    console.log(this.web3)
     return {
       input: '',
       lastDist: {},

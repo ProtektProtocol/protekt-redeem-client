@@ -113,6 +113,9 @@ const actions = {
         'claimStatus',
         [address.toLowerCase(), 1, state.latestWeek]
       ]);
+
+      console.log('res', res)
+
       res = Object.fromEntries(res.map((status, i) => [i + 1, status]));
       commit('GET_CLAIM_STATUS_SUCCESS');
       return res;

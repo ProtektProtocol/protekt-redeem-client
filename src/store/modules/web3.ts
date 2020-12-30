@@ -199,8 +199,9 @@ const actions = {
   lookupAddress: async ({ commit }) => {
     if (state.injectedChainId !== 1) {
       commit('LOOKUP_ADDRESS_REQUEST');
-      commit('LOOKUP_ADDRESS_SUCCESS', shorten(state.account));
-      return shorten(state.account);
+      const nameTest = state.account || '';
+      commit('LOOKUP_ADDRESS_SUCCESS', shorten(nameTest));
+      return shorten(nameTest);
     }
     commit('LOOKUP_ADDRESS_REQUEST');
     try {

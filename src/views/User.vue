@@ -35,7 +35,7 @@
                 <div class="flex-auto">
                   <a
                     :href="
-                      `${config.repo}/reports/${_week(
+                      `${config.repo}/reports/${config.tokenSymbol}/${_week(
                         week
                       )}/_totals.json`
                     "

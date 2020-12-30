@@ -78,10 +78,6 @@ export default {
       return this.config.chainId !== this.web3.injectedChainId;
     },
     showLogin() {
-      console.log('this')
-      console.log(this)
-      console.log(this.web3)
-
       return (
         (!this.$auth.isAuthenticated && !this.web3.injectedLoaded) ||
         (!this.$auth.isAuthenticated && !this.wrongNetwork)
