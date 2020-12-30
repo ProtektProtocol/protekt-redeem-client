@@ -11,7 +11,7 @@ const configs = {
 const env = process.env.VUE_APP_ENV || 'production';
 const network = process.env.VUE_APP_NETWORK || 'homestead';
 
-let config;
+const config;
 
 config = TCOMP
 
