@@ -1,6 +1,8 @@
 {
   "network": "homestead",
   "chainId": 1,
+  "tokenSymbol": "PTK",
+  "repo": "https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master",
   "rpcUrl": "https://cloudflare-eth.com",
   "wsUrl": "wss://eth-mainnet.ws.alchemyapi.io/v2/yGUdqppFjRS4RCoh6MQhfc3gt0JatmIG",
   "addresses": {

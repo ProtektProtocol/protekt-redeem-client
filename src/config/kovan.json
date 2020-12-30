@@ -1,6 +1,8 @@
 {
   "network": "kovan",
   "chainId": 42,
+  "tokenSymbol": "PTK",
+  "repo": "https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master",
   "rpcUrl": "https://eth-kovan.ws.alchemyapi.io/v2/YUqQXLI0vvfq9EOkeymTDG4cwvUldKI5",
   "wsUrl": "wss://eth-kovan.ws.alchemyapi.io/v2/YUqQXLI0vvfq9EOkeymTDG4cwvUldKI5",
   "addresses": {

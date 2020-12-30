@@ -24,7 +24,7 @@
               <Icon name="external-link" class="ml-1" />
             </p>
           </a>
-          <Block :slim="true" title="Pending PTK">
+          <Block :slim="true" :title="`Pending ${config.tokenSymbol}`">
             <div class="overflow-hidden">
               <div
                 v-for="(dist, week, i) in unclaimed"
@@ -35,7 +35,7 @@
                 <div class="flex-auto">
                   <a
                     :href="
-                      `https://github.com/ProtektProtocol/protekt-mining-scripts/blob/master/reports/${_week(
+                      `${config.repo}/reports/${_week(
                         week
                       )}/_totals.json`
                     "
@@ -45,20 +45,20 @@
                     <Icon name="external-link" class="ml-1" />
                   </a>
                 </div>
-                <div>{{ $n(dist) }} PTK</div>
+                <div>{{ $n(dist) }} {{ config.tokenSynbol }}</div>
               </div>
               <p
                 v-if="Object.keys(unclaimed).length === 0"
                 class="p-4 m-0 d-block"
               >
-                There isn't any pending PTK here.
+                There isn't any pending {{ config.tokenSynbol }} here.
               </p>
             </div>
           </Block>
           <Block
             v-if="Object.keys(claimed).length > 0"
             :slim="true"
-            title="Claimed PTK"
+            :title="`Claimed ${config.tokenSymbol}`"
           >
             <div class="overflow-hidden">
               <div
@@ -70,7 +70,7 @@
                 <div class="flex-auto">
                   <a
                     :href="
-                      `https://github.com/ProtektProtocol/protekt-mining-scripts/blob/master/reports/${_week(
+                      `${config.repo}/reports/${_week(
                         week
                       )}/_totals.json`
                     "
@@ -80,16 +80,16 @@
                     <Icon name="external-link" class="ml-1" />
                   </a>
                 </div>
-                <div>{{ $n(dist) }} PTK</div>
+                <div>{{ $n(dist) }} {{ config.tokenSynbol }}</div>
               </div>
             </div>
           </Block>
         </div>
         <div class="col-12 col-lg-4 float-left">
-          <Block title="Total pending PTK">
+          <Block :title="`Total pending ${config.tokenSymbol}`">
             <div class="mb-2">
               <UiButton class="width-full mb-2">
-                {{ $n(totalUnclaimed) }} PTK
+                {{ $n(totalUnclaimed) }} {{ config.tokenSynbol }}
               </UiButton>
             </div>
             <UiButton

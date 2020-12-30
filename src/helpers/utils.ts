@@ -80,7 +80,7 @@ export async function getSnapshot() {
   const networkStr = config.chainId === 1 ? '' : '-kovan';
   let snapshot = {}
   try {
-    const response = await axios.get(`https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master/reports/${'PTK'}/snapshot.json`);
+    const response = await axios.get(`${config.repo}/reports/${config.tokenSymbol}/snapshot.json`);
     snapshot = response.data
     console.log(response);
   } catch (error) {
@@ -94,7 +94,7 @@ export async function getReport(snapshot, week) {
   let report = {};
   let response
   try {
-    response = await axios.get(`https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master/reports/${'PTK'}/${week}/_totals.json`);
+    response = await axios.get(`${config.repo}/reports/${config.tokenSymbol}/${week}/_totals.json`);
     report = response.data
     console.log(response);
   } catch (error) {
@@ -109,7 +109,7 @@ export async function getReports(snapshot, weeks) {
   let response
   for (const week of weeks) {
     try {
-      response = await axios.get(`https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master/reports/${'PTK'}/${week}/_totals.json`);
+      response = await axios.get(`${config.repo}/reports/${config.tokenSymbol}/${week}/_totals.json`);
       reports[week] = response.data
       console.log(response);
     } catch (error) {
