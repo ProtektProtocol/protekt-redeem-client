@@ -6,7 +6,7 @@ import { Interface } from '@ethersproject/abi';
 import abi from '@/helpers/abi';
 import config from '@/config';
 import wsProvider from '@/helpers/provider';
-import { isTxRejected } from '@/helpers/utils';
+import { shorten, isTxRejected } from '@/helpers/utils';
 
 let provider;
 let web3;
@@ -197,7 +197,11 @@ const actions = {
     }
   },
   lookupAddress: async ({ commit }) => {
-    if (state.injectedChainId !== 1) return;
+    if (state.injectedChainId !== 1) {
+      commit('LOOKUP_ADDRESS_REQUEST');
+      commit('LOOKUP_ADDRESS_SUCCESS', shorten(state.account));
+      return shorten(state.account);
+    }
     commit('LOOKUP_ADDRESS_REQUEST');
     try {
       const name = await web3.lookupAddress(state.account);

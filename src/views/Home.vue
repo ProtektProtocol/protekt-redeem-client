@@ -60,6 +60,9 @@ import config from '@/config';
 
 export default {
   data() {
+
+    console.log('||||')
+    console.log(this.web3)
     return {
       input: '',
       lastDist: {},

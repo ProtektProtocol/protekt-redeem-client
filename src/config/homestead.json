@@ -3,8 +3,10 @@
   "chainId": 1,
   "tokenSymbol": "PTK",
   "repo": "https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master",
-  "rpcUrl": "https://cloudflare-eth.com",
-  "wsUrl": "wss://eth-mainnet.ws.alchemyapi.io/v2/yGUdqppFjRS4RCoh6MQhfc3gt0JatmIG",
+  "rpcUrl": "https://mainnet.infura.io/v3/395c09a1d60042e2bcb49522b34fcb4e",
+  "rpcUrl2": "https://cloudflare-eth.com",
+  "wsUrl": "wss://mainnet.infura.io/ws/v3/395c09a1d60042e2bcb49522b34fcb4e",
+  "wsUrl2": "wss://eth-mainnet.ws.alchemyapi.io/v2/yGUdqppFjRS4RCoh6MQhfc3gt0JatmIG",
   "addresses": {
     "merkleRedeem": "0x6d19b2bF3A36A61530909Ae65445a906D98A2Fa8",
     "multicall": "0xeefBa1e63905eF1D7ACbA5a8513c70307C1cE441"

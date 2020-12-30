@@ -20,6 +20,24 @@
       "options": {
         "infuraId": "395c09a1d60042e2bcb49522b34fcb4e"
       }
+    },
+    "portis": {
+      "id": "portis",
+      "name": "Portis",
+      "options": {
+        "network": "rinkeby",
+        "dappId": "3f1c3cfc-7dd5-4e8a-aa03-71ff7396d9fe"
+      }
+    },
+    "walletlink": {
+      "id": "walletlink",
+      "name": "Coinbase",
+      "options": {
+        "appName": "Protekt Claims Redeem",
+        "darkMode": true,
+        "chainId": 4,
+        "ethJsonrpcUrl": "https://rinkeby.infura.io/v3/395c09a1d60042e2bcb49522b34fcb4e"
+      }
     }
   }
 }
