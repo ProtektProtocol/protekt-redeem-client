@@ -82,7 +82,6 @@ export async function getSnapshot() {
   try {
     const response = await axios.get(`${config.repo}/reports/${config.tokenSymbol}/snapshot.json`);
     snapshot = response.data
-    console.log(response);
   } catch (error) {
     console.error(error);
   }
@@ -110,7 +109,6 @@ export async function getReports(snapshot, weeks) {
     try {
       response = await axios.get(`${config.repo}/reports/${config.tokenSymbol}/${week}/_totals.json`);
       reports[week] = response.data
-      console.log(response);
     } catch (error) {
       reports[week] = {}
       console.error(error);

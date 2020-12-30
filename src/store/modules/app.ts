@@ -51,8 +51,6 @@ const actions = {
       latestWeek = result[0][0];
       latestReport = await getReport(snapshot, latestWeek);
 
-      console.log('latestReport');
-      console.log(latestReport);
 
       reports[latestWeek] = latestReport;
     }
@@ -76,7 +74,6 @@ const actions = {
       const merkleTree = loadTree(state.reports[week]);
 
       // Get merkle root
-      console.log(week, merkleTree.getHexRoot());
 
       const proof = merkleTree.getHexProof(
         soliditySha3(address, toWei(claimBalance))
@@ -91,7 +88,6 @@ const actions = {
         'claimWeeks',
         [address, claims]
       ];
-      console.log('Claim payload', claims);
       const tx = await dispatch('sendTransaction', params);
       const amountStr = numeral(totalClaim).format('(0.[00]a)');
       dispatch('notify', ['green', `You've just claimed ${amountStr} BAL!`]);
@@ -114,7 +110,6 @@ const actions = {
         [address.toLowerCase(), 1, state.latestWeek]
       ]);
 
-      console.log('res', res)
 
       res = Object.fromEntries(res.map((status, i) => [i + 1, status]));
       commit('GET_CLAIM_STATUS_SUCCESS');
