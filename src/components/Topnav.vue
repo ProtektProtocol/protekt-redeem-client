@@ -15,7 +15,7 @@
                 width="32"
                 height="32"
               />
-              <span v-text="'Claim PTK Rewards'" class="hide-sm" />
+              <span v-text="`Claim ${ config.tokenSymbol } Rewards`" class="hide-sm" />
             </router-link>
           </div>
           <div :key="web3.account">
@@ -62,13 +62,15 @@
 
 <script>
 import { mapActions } from 'vuex';
+import config from '@/config';
 
 export default {
   data() {
     return {
       loading: false,
       modalOpen: false,
-      modalAboutOpen: false
+      modalAboutOpen: false,
+      config: config
     };
   },
   computed: {

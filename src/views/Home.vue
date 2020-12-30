@@ -45,7 +45,7 @@
               <div class="flex-auto">
                 <User :address="address" />
               </div>
-              <div>{{ $n(dist) }} PTK</div>
+              <div>{{ $n(dist) }} {{ config.tokenSymbol }}</div>
             </div>
           </div>
         </Block>
@@ -56,12 +56,14 @@
 
 <script>
 import { isAddress } from '@ethersproject/address';
+import config from '@/config';
 
 export default {
   data() {
     return {
       input: '',
-      lastDist: {}
+      lastDist: {},
+      config: config
     };
   },
   created() {
