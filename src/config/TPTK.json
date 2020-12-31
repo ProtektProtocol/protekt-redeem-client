@@ -1,12 +1,12 @@
 {
   "network": "kovan",
-  "chainId": 4,
-  "tokenSymbol": "TCOMP",
+  "chainId": 42,
+  "tokenSymbol": "TPTK",
   "repo": "https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master",
   "rpcUrl": "https://kovan.infura.io/v3/395c09a1d60042e2bcb49522b34fcb4e",
   "wsUrl": "wss://kovan.infura.io/ws/v3/395c09a1d60042e2bcb49522b34fcb4e",
   "addresses": {
-    "merkleRedeem": "0x1EEfB801C34348136B49704f18C66B38bB541fC7",
+    "merkleRedeem": "0xC7a419Fd25A91A11f45dad873eaCE65bbC95A53A",
     "multicall": "0x2cc8688C5f75E365aaEEb4ea8D6a480405A48D2A"
   },
   "connectors": {
