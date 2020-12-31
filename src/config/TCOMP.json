@@ -2,6 +2,7 @@
   "network": "kovan",
   "chainId": 4,
   "tokenSymbol": "TCOMP",
+  "tokenAddress": "0xc00e94Cb662C3520282E6f5717214004A7f26888",
   "repo": "https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master",
   "rpcUrl": "https://kovan.infura.io/v3/395c09a1d60042e2bcb49522b34fcb4e",
   "wsUrl": "wss://kovan.infura.io/ws/v3/395c09a1d60042e2bcb49522b34fcb4e",

@@ -2,6 +2,7 @@
   "network": "kovan",
   "chainId": 42,
   "tokenSymbol": "TPTK",
+  "tokenAddress": "0xccfbdc0592710892b06a2261bc52adc625eb4645",
   "repo": "https://raw.githubusercontent.com/ProtektProtocol/protekt-mining-scripts/master",
   "rpcUrl": "https://kovan.infura.io/v3/395c09a1d60042e2bcb49522b34fcb4e",
   "wsUrl": "wss://kovan.infura.io/ws/v3/395c09a1d60042e2bcb49522b34fcb4e",
